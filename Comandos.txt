@@ -1,0 +1,23 @@
+Prefixo = ?
+
+?comandos: Mostra todos os comandos
+
+Saudações: ?oi, ?ola, ?bom dia, etc.
+
+?nome ou ?bot: O Bot se apresenta
+
+?sabedoria: Cita uma frase aleatória
+
+?numero ou ?num: Gera um numero aleatório entre 1 e 1 milhão
+
+?roll: Rola um dado de RPG a sua escolha
+
+?data ou ?hora: Mostra a data e hora atual
+
+?conte segundos ou ?segundos: Cronometra o tempo em segundos 
+
+?conte minutos ou ?minutos: Cronometra o tempo em minutos
+
+?criador
+
+?cuidado
