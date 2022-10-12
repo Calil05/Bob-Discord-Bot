@@ -9,6 +9,7 @@ from senha import token
 from time import sleep
 import os
 from comandos import comandos_bot
+from pytz import timezone
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -49,7 +50,9 @@ class MyClient(discord.Client):
 
         elif message.content == "?data" or message.content == "?hora":
             now = datetime.now()
-            data = now.strftime("%d/%m/%Y %H:%M:%S")
+            fuso = timezone('America/Sao_Paulo')
+            fuso_data = now.astimezone(fuso)
+            data = fuso_data.strftime("%d/%m/%Y %H:%M:%S")
             await message.channel.send("Data e Hora Atual: {}".format(data))
 
         elif message.content == "?numero" or message.content == "?num":
@@ -60,7 +63,7 @@ class MyClient(discord.Client):
             await message.channel.send("O Calil é brabo, ele é meu criador!")
 
         elif message.content == "?nome" or message.content == "?bot":
-            await message.channel.send("Meu nome é Bob, o Bot")   
+            await message.channel.send("Meu nome é Bob, o Bot. Bob significa: Basic Ongoing Bot")   
 
         elif message.content == "?cuidado":
             await message.author.send("Eu vou caçar você e toda sua familia...") 
